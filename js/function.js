@@ -4,6 +4,10 @@ function transactionAmount(amountInputId) {
   amountElement.value = "";
   if (isNaN(amountString) == false) {
     const amount = parseFloat(amountString);
+    if (amount < 0) {
+      alert("please enter a valid number. you typed a negative amount");
+      return 0;
+    }
     return amount;
   } else {
     alert("please enter a valid number");
